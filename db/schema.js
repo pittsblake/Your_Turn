@@ -26,10 +26,10 @@ const MeetUpSchema = new Schema ({
         type: String,
         required: true
     },
-    game: [BoardGameSchema]
+    boardGame: [BoardGameSchema]
 })
 
-const LocationSchema = new Schema ({
+const CitySchema = new Schema ({
     city: {
         type: String,
         required: true
@@ -53,13 +53,13 @@ const UserSchema = new Schema ({
     }
 })
 
-const LocationModel = mongoose.model('Location', LocationSchema)
+const CityModel = mongoose.model('City', CitySchema)
 const MeetUpModel = mongoose.model('MeetUp', MeetUpSchema)
 const BoardGameModel = mongoose.model('Board Game', BoardGameSchema)
 const UserModel = mongoose.model('User', UserSchema)
 
 module.exports = {
-    LocationModel: LocationModel,
+    CityModel: CityModel,
     MeetUpModel: MeetUpModel,
     BoardGameModel: BoardGameModel,
     UserModel: UserModel

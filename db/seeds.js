@@ -16,7 +16,7 @@ db.once('open', function () {
 
 const Schema = require("./schema.js");
 
-const LocationModel = Schema.LocationModel;
+const CityModel = Schema.CityModel;
 const MeetUpModel = Schema.MeetUpModel;
 const BoardGameModel = Schema.BoardGameModel;
 const UserModel = Schema.UserModel;
@@ -27,25 +27,56 @@ UserModel.remove({}, function (err) {
 });
 
 //Delete Locations
-LocationModel.remove({}, function (err) {
+CityModel.remove({}, function (err) {
     console.log(err)
 });
 
 
 //Create locations
-const atlanta = new LocationModel({city: 'Atlanta'})
-const boston = new LocationModel({city: 'Boston'})
-const miami = new LocationModel({city: 'Miami'})
-const sanDiego = new LocationModel({city: 'San Diego'})
+const atlanta = new CityModel({city: 'Atlanta'})
+const boston = new CityModel({city: 'Boston'})
+const miami = new CityModel({city: 'Miami'})
+const sanDiego = new CityModel({city: 'San Diego'})
 
 //Create Meet Ups
-const ponceCity = new LocationModel({location: 'Ponce City', date: 'Wednesdays', time: '6:30pm'})
-const tapRoom = new LocationModel({location: 'Tap Room', date: 'Thursdays', time: '7:00pm'})
-const krogStreet = new LocationModel({location: 'Krog Street Market', date: 'Saturday', time: '12:00pm'})
-const brotherMotto = new LocationModel({location: 'Brother Motto', date: 'Sunday', time: '1:00pm'})
+const ponceCity = new MeetUpModel({location: 'Ponce City', date: 'Wednesdays', time: '6:30pm'})
+const tapRoom = new MeetUpModel({location: 'Tap Room', date: 'Thursdays', time: '7:00pm'})
+const krogStreet = new MeetUpModel({location: 'Krog Street Market', date: 'Saturday', time: '12:00pm'})
+const brotherMotto = new MeetUpModel({location: 'Brother Motto', date: 'Sunday', time: '1:00pm'})
 
 //Create Games
 const catan = new BoardGameModel({name: 'Settlers of Catan'})
 const scavengers = new BoardGameModel({name: 'Arctic Scavengers'})
-const catan = new BoardGameModel({name: 'Settlers of Catan'})
-const catan = new BoardGameModel({name: 'Settlers of Catan'})
+const resistance = new BoardGameModel({name: 'Resistance'})
+const pandemic = new BoardGameModel({name: 'Pandemic'})
+
+//Create User
+const john = new UserModel({name: "John"})
+
+
+// Assigning Board Games to Meetups, Meet ups to Board Games
+const boardGames = [catan, scavengers, resistance, pandemic]
+const meetUps = [ponceCity, tapRoom, krogStreet, brotherMotto]
+const cities = [atlanta, boston, miami, sanDiego]
+
+
+
+cities.forEach((city) => {
+    console.log('test 1' + city)
+    city.meetUp = meetUps
+    console.log('test 2' + city)
+
+    city.meetUp.forEach((meetUp) => {
+        meetUp.boardGame = boardGames
+    })
+
+    city.save()
+        .then((city) => {
+            console.log(`${city.city} saved!`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
+db.close();
