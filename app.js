@@ -40,13 +40,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Controllers
-
 app.get('/', (req, res) => {
   res.redirect('/city')
 })
 
 const cityController = require('./routes/cityController')
 app.use('/city', cityController)
+
+const meetUpController = require('./routes/meetUpController')
+app.use('/meetup', meetUpController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
