@@ -32,7 +32,7 @@ CityModel.remove({}, function (err) {
 });
 
 
-//Create locations
+//Create Cities
 const atlanta = new CityModel({city: 'Atlanta'})
 const boston = new CityModel({city: 'Boston'})
 const miami = new CityModel({city: 'Miami'})
@@ -67,6 +67,7 @@ cities.forEach((city) => {
     console.log('test 2' + city)
 
     city.meetUp.forEach((meetUp) => {
+        //this is grabbing the boardGame from the schema and 
         meetUp.boardGame = boardGames
     })
 
