@@ -21,4 +21,21 @@ router.get('/', (req, res) => {
         })
 })
 
+
+
+
+
+
+//Show Route (make sure close to bottom)
+router.get('/:cityId', (req, res) => {
+    const cityId = req.params.cityId
+
+    CityModel.findById(cityId)
+        .then((city) => {
+            res.render('city/show', {
+                city: city
+            })
+        })
+})
+
 module.exports = router
