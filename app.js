@@ -23,7 +23,6 @@ db.once('open', () => {
 })
 
 
-//const index = require('./routes/indexController');
 
 const app = express();
 
@@ -41,7 +40,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Controllers
-//app.use('/', index);
+
+app.get('/', (req, res) => {
+  res.redirect('/city')
+})
 
 const cityController = require('./routes/cityController')
 app.use('/city', cityController)
