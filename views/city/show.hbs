@@ -1,6 +1,9 @@
 <div>
+    
+    <h1>Meet ups</h1>
+    
     {{#each city.meetUp}}
-        <p>{{this.location}}</p>
+        <p><a href="/city/cityId/{{this._id}}">{{this.location}}</a></p>
     {{/each}}
 
 </div>
