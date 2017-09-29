@@ -45,10 +45,10 @@ const krogStreet = new MeetUpModel({location: 'Krog Street Market', date: 'Satur
 const brotherMotto = new MeetUpModel({location: 'Brother Motto', date: 'Sunday', time: '1:00pm'})
 
 //Create Games
-const catan = new BoardGameModel({name: 'Settlers of Catan'})
-const scavengers = new BoardGameModel({name: 'Arctic Scavengers'})
-const resistance = new BoardGameModel({name: 'Resistance'})
-const pandemic = new BoardGameModel({name: 'Pandemic'})
+const catan = new BoardGameModel({name: 'Settlers of Catan', date: 'October 4th'})
+const scavengers = new BoardGameModel({name: 'Arctic Scavengers', date: 'October 11th' })
+const resistance = new BoardGameModel({name: 'Resistance', date: 'October 18th'})
+const pandemic = new BoardGameModel({name: 'Pandemic', date: 'October 25th'})
 
 //Create User
 const john = new UserModel({name: "John"})

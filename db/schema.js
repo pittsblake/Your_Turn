@@ -10,6 +10,10 @@ const BoardGameSchema = new Schema ({
     description: {
         type: String,
         required: false
+    },
+    date: {
+        type: String,
+        required: true
     }
 })
 

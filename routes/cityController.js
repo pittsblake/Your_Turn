@@ -38,8 +38,8 @@ router.get('/:cityId', (req, res) => {
         })
 })
 
-router.get('/:cityId/meetup/:meetUpId', (req, res) => {
-    console.log('Meetup Controller');
+/*router.get('/:cityId/meetUp/:meetUpId', (req, res) => {
+    console.log('City Controller');
     const cityId = req.params.cityId
     const meetUpId = req.params.meetUpId
 
@@ -51,10 +51,13 @@ router.get('/:cityId/meetup/:meetUpId', (req, res) => {
                 meetUp: meetUp,
                 cityId: cityId
             })
+          
         })
+    
+    
         .catch((error) => {
             console.log(error)
         })
-});
+});*/
 
 module.exports = router

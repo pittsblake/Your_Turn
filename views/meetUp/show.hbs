@@ -1,9 +1,14 @@
 <div>
     
-    <h1>When</h1>
+    <h1>{{meetUp.location}}</h1>
+    <h2>{{meetUp.date}}</h2>
+    <h3>{{meetUp.time}}</h3>
     
+
     {{#each meetUp.boardGame}}
-        <p>{{this.gameBoard}}</p>
+        <p>{{this.name}} -- {{this.date}} </p>
+        <a href="">Edit</a>
+        <hr>
     {{/each}}
 
 </div>

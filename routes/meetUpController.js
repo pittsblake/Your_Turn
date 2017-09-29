@@ -1,14 +1,11 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router({mergeParams: true})
 
 const Schema = require("../db/schema.js");
 const CityModel = Schema.CityModel;
 
 
-
-
-//Show route
-router.get('/:id', (req, res) => {
+router.get('/:meetUpId', (req, res) => {
     console.log('Meetup Controller');
     const cityId = req.params.cityId
     const meetUpId = req.params.meetUpId
@@ -21,10 +18,8 @@ router.get('/:id', (req, res) => {
                 meetUp: meetUp,
                 cityId: cityId
             })
+          
         })
-        .catch((error) => {
-            console.log(error)
-        })
-});
+    })
 
-module.exports = router;
+module.exports = router
