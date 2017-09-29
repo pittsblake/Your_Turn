@@ -12,12 +12,26 @@ router.get('/new', (req, res) => {
     const meetUpId = req.params.meetUpId
 
     res.render('meetUp/new', {
-        meetUpId: meetUpId
+        meetUpId: meetUpId,
+        cityId: cityId
     })
 })
 
 
 // Create Route
+router.post('/', (req, res) => {
+    const cityId = req.params.cityId
+    const newMeetUp = req.body
+
+    CityModel.findById(cityId)
+        .then((city) => {
+            city.meetUp.push(newMeetUp)
+            return city.save()
+        })
+        .then((city) => {
+            res.redirect(`/city/${cityId}`)
+        })
+})
 
 
 
