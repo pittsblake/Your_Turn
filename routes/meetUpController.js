@@ -8,6 +8,12 @@ const CityModel = Schema.CityModel;
 // New Route
 router.get('/new', (req, res) => {
     
+    const cityId = req.params.cityId
+    const meetUpId = req.params.meetUpId
+
+    res.render('meetUp/new', {
+        meetUpId: meetUpId
+    })
 })
 
 
