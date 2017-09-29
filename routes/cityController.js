@@ -4,6 +4,7 @@ const router = express.Router()
 const Schema = require("../db/schema.js");
 const CityModel = Schema.CityModel;
 
+
 // INDEX Route
 router.get('/', (req, res) => {
 
@@ -20,8 +21,6 @@ router.get('/', (req, res) => {
             console.log(error)
         })
 })
-
-
 
 
 

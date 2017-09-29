@@ -55,6 +55,10 @@ app.use('/city/:cityId/meetUp', meetUpController)
 const boardGameController = require('./routes/boardGameController')
 app.use('/city/:cityId/meetUp/:meetUpId/boardGame', boardGameController)
 
+//const userController = require('./routes/userController')
+//app.use('/city/user', userController)
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const err = new Error('Not Found');
