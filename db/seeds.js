@@ -14,6 +14,7 @@ db.once('open', function () {
     console.log("Connected to MongoDB!");
 });
 
+
 const Schema = require("./schema.js");
 
 const CityModel = Schema.CityModel;
@@ -22,7 +23,7 @@ const BoardGameModel = Schema.BoardGameModel;
 const UserModel = Schema.UserModel;
 
 //Delete all Users
-UserModel.remove({}, function (err) {
+CityModel.remove({}, function (err) {
     console.log(err)
 });
 

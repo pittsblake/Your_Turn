@@ -25,4 +25,27 @@ router.get('/:boardGameId/edit', (req, res) => {
          })
  })
 
+ //Update Route
+ router.put('/:boardGameId', (req, res) => {
+    const cityId = req.params.cityId
+    const meetUpId = req.params.meetUpId
+    const boardGameId = req.params.boardGameId
+    const updatedBoardGame = req.body
+
+    CityModel.findById(cityId)
+        .then((city) => {
+            const meetUp = city.meetUp.id(meetUpId)
+            const boardGame = meetUp.boardGame.id(boardGameId)
+            boardGame.name = updatedBoardGame.name
+            boardGame.date = updatedBoardGame.date
+            return city.save();
+        })
+        .then (() => {
+            res.redirect(`/city/${cityId}/meetUp/${meetUpId}`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+ })
+
  module.exports = router

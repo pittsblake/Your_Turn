@@ -3,7 +3,12 @@
     <h1>Meet ups</h1>
     
     {{#each city.meetUp}}
-        <p><a href="/city/{{../city._id}}/meetUp/{{this._id}}">{{this.location}}</a></p>
+        <h3><a href="/city/{{../city._id}}/meetUp/{{this._id}}">{{this.location}}</h3></p>
+        <a href="/city/{{../city._id}}/meetUp/{{this._id}}/delete">Delete</a>
+        <hr>
     {{/each}}
-
+    <br>
+    <a href="/city">Home</a>
+    <br>
+    <a href="">Create a Meet up</a>
 </div>

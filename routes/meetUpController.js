@@ -5,6 +5,15 @@ const Schema = require("../db/schema.js");
 const CityModel = Schema.CityModel;
 
 
+// New Route
+router.get('/new', (req, res) => {
+    
+})
+
+
+// Create Route
+
+
 
 // Show Route
 router.get('/:meetUpId', (req, res) => {
@@ -23,6 +32,22 @@ router.get('/:meetUpId', (req, res) => {
           
         })
     })
+
+// Delete Route
+router.get('/:meetUpId/delete', (req, res) => {
+    const cityId = req.params.cityId
+    const meetUpId = req.params.meetUpId
+
+    CityModel.findById(cityId)
+        .then((city) => {
+            const meetUp = city.meetUp.id(meetUpId).remove()
+
+            return city.save()
+        })
+        .then(() => {
+            res.redirect(`/city/${cityId}`)
+        })
+})
 
 
 module.exports = router
