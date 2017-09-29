@@ -5,6 +5,8 @@ const Schema = require("../db/schema.js");
 const CityModel = Schema.CityModel;
 
 
+
+// Show Route
 router.get('/:meetUpId', (req, res) => {
     console.log('Meetup Controller');
     const cityId = req.params.cityId
@@ -21,5 +23,6 @@ router.get('/:meetUpId', (req, res) => {
           
         })
     })
+
 
 module.exports = router

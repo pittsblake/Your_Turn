@@ -1,0 +1,10 @@
+<form action="/city/{{city._id}}/meetUp/{{boardGame._id}}?_method=PUT" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{boardGame.name}}">
+
+    <label for="date">Date</label>
+    <input type="text" name="date" value="{{boardGame.date}}">
+
+    <input type="submit" value="Edit">
+
+</form>

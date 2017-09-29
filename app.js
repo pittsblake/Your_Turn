@@ -48,7 +48,10 @@ const cityController = require('./routes/cityController')
 app.use('/city', cityController)
 
 const meetUpController = require('./routes/meetUpController')
-app.use('/city/:cityId/meetUp/', meetUpController)
+app.use('/city/:cityId/meetUp', meetUpController)
+
+const boardGameController = require('./routes/boardGameController')
+app.use('/city/:cityId/meetUp/:meetUpId/boardGame', boardGameController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
