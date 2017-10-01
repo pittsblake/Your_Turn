@@ -1,29 +1,35 @@
 body {
-  padding: 0px
+  padding: 0px;
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 }
 
 a {
-  color: #00B7FF
+  color: #00B7FF;
 }
 
 .delete {
-  color: red
+  color: red;
 }
 
-.title {
-  font-family: 'Audiowide', cursive
+.your-turn {
+  font-family: 'Audiowide', cursive;
+}
+
+.pic-title {
+  font-size: 40px;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 
 nav {
   height: 80px;
-line-height: 80px;
-margin: 0px
+  line-height: 80px;
+  margin: 0px;
 }
 
-.img_margin {
-  margin: 0, 25px;
+.boston {
+  background: #9dcdd4;
 }
 
 .group{
