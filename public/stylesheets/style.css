@@ -12,7 +12,9 @@ a {
 }
 
 .your-turn {
-  font-family: 'Audiowide', cursive;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 100px;
+  font-style: italic;
 }
 
 .pic-title {
