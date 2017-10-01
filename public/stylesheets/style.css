@@ -1,5 +1,6 @@
 body {
   padding: 0px;
+  
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 }
 
@@ -9,6 +10,8 @@ a {
 
 .delete {
   color: red;
+  display: flex;
+  justify-content: center;
 }
 
 .your-turn {
@@ -17,17 +20,15 @@ a {
   font-style: italic;
 }
 
+h1, h2 {
+  font-family: 'Raleway Dots', cursive;
+  font-style: italic;
+}
+
 .pic-title {
   font-size: 40px;
   margin: 0 auto;
   padding: 0 auto;
-}
-
-
-nav {
-  height: 80px;
-  line-height: 80px;
-  margin: 0px;
 }
 
 .boston {

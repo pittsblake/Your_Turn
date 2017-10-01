@@ -1,22 +1,25 @@
-<div class="group">
-   <h1> {{#each city}}  {{this.city}} {{/each}} Meet Ups</h1>      
-</div>
-    
-<br>
+<div class="grey lighten-5">    
+    <nav class="vertical-align grey darken-2">
+        <div class="nav-wrapper ">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/city/{{city._id}}/meetUp/new">Create a Meet Up</a></li>
+            <li><a href="/city">Home</a></li>
+        </ul>
+        </div>
+    </nav>
+    <div class="grey lighten-5">
+        <div class="group">
+        <h1> {{#each city}}  {{this.city}} {{/each}} Meet Ups</h1>      
+        </div>
+            
+        <br>
 
-<div>
-    {{#each city.meetUp}}
-        <h3><a href="/city/{{../city._id}}/meetUp/{{this._id}}">{{this.location}}</h3></p>
-        <a href="/city/{{../city._id}}/meetUp/{{this._id}}/delete" class= "delete">Delete</a>
-        <hr>
-    {{/each}}
-    <br>
-    
-    <a href="/city/{{city._id}}/meetUp/new">Create a Meet Up</a>
-    
-    <br>
-    <br>
-   
-    <a href="/city">Home</a>
-
+        <div>
+            {{#each city.meetUp}}
+                <h3 class="center"><a href="/city/{{../city._id}}/meetUp/{{this._id}}">{{this.location}}</h3>
+            <!-- <a href="/city/{{../city._id}}/meetUp/{{this._id}}/delete" class= "delete">Delete</a> -->
+                
+            {{/each}}
+        </div>
+    </div>
 </div>
