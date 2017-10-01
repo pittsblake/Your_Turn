@@ -39,3 +39,7 @@ nav {
   margin: 40px;
   padding: 10px;
 }
+
+.parallax-container {
+  height: 600px;
+}
