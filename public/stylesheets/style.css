@@ -1,8 +1,35 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 }
 
 a {
-  color: #00B7FF;
+  color: #00B7FF
+}
+
+.delete {
+  color: red
+}
+
+.title {
+  font-family: 'Audiowide', cursive
+}
+
+
+nav {
+  height: 80px;
+line-height: 80px;
+margin: 0px
+}
+
+.img_margin {
+  margin: 0, 25px;
+}
+
+.group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 40px;
+  padding: 10px;
 }

@@ -1,10 +1,13 @@
+<div class="group">
+   <h1> {{#each city}}  {{this.city}} {{/each}} Meet Ups</h1>      
+</div>
+    
+<br>
+
 <div>
-    
-    <h1>Meet ups</h1>
-    
     {{#each city.meetUp}}
         <h3><a href="/city/{{../city._id}}/meetUp/{{this._id}}">{{this.location}}</h3></p>
-        <a href="/city/{{../city._id}}/meetUp/{{this._id}}/delete">Delete</a>
+        <a href="/city/{{../city._id}}/meetUp/{{this._id}}/delete" class= "delete">Delete</a>
         <hr>
     {{/each}}
     <br>
@@ -15,5 +18,5 @@
     <br>
    
     <a href="/city">Home</a>
-    
+
 </div>

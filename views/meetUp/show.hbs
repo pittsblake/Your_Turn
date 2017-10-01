@@ -8,7 +8,7 @@
     {{#each meetUp.boardGame}}
         <p>{{this.name}} -- {{this.date}} </p>
         <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit">Edit</a>
-        <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete">Delete</a>
+        <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="delete">Delete</a>
         <hr>
     {{/each}}
     <br>

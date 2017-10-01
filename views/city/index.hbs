@@ -1,11 +1,40 @@
-<div>
-    <h1>Your Turn</h1>
-    <h3>Pick Your City</h3>    
+<div class="">
+    <nav class="nav valign-wrapper">
+        <h2 class="left title">Your Turn</h2>
+    </nav>
 </div>
+
+<div class="container">
+    <div class="row">
+        <h3 class="center">Pick Your City</h3>    
+    </div>
+</div>
+
+<div class="group">
+    
+        <div class="card">
+            <div class="card-image">
+                <img src="{{cities.[0].img}}">
+                <span class="card-title">Atlanta</span>
+            </div>
+        </div>
+    
+    <!-- <a href="/city/{{cities.[0]._id}}"><img src="{{cities.[0].img}}" alt=""></a> -->
+    <a href="/city/{{cities.[1]._id}}"><img src="{{cities.[1].img}}" alt=""></a>
+</div>
+<div class="group">
+    <a href="/city/{{cities.[2]._id}}"><img src="{{cities.[2].img}}" alt=""></a>
+    <a href="/city/{{cities.[3]._id}}"><img src="{{cities.[3].img}}" alt=""></a>
+</div>
+
 {{#each cities}}
-    <div>
-        <a href="/city/{{this._id}}">{{this.city}}</a>
-        <hr>
+    <div class="group">
+        <div class="group">
+            <!-- <a href="/city/{{this._id}}"><img src={{this.img}} alt="" class="group"></a> -->
+            <!-- <a href="/city/{{this._id}}">{{this.city}}</a> -->
+        </div>
     </div>
    
 {{/each}}
+
+

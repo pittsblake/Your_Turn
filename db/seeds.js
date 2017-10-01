@@ -34,10 +34,10 @@ CityModel.remove({}, function (err) {
 
 
 //Create Cities
-const atlanta = new CityModel({city: 'Atlanta'})
-const boston = new CityModel({city: 'Boston'})
-const miami = new CityModel({city: 'Miami'})
-const sanDiego = new CityModel({city: 'San Diego'})
+const atlanta = new CityModel({city: 'Atlanta', img: "https://i.imgur.com/3QR8Cz6m.jpg"})
+const boston = new CityModel({city: 'Boston', img: "https://i.imgur.com/NtFJzVgm.jpg"})
+const miami = new CityModel({city: 'Chicago', img: "https://i.imgur.com/vSkZXL0m.jpg"})
+const sanDiego = new CityModel({city: 'San Diego', img: "https://i.imgur.com/EGdg1Vxm.jpg"})
 
 //Create Meet Ups
 const ponceCity = new MeetUpModel({location: 'Ponce City', date: 'Wednesdays', time: '6:30pm'})

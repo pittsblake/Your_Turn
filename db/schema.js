@@ -38,6 +38,9 @@ const CitySchema = new Schema ({
         type: String,
         required: true
     },
+    img: {
+        type: String,
+    },
     meetUp: [MeetUpSchema]
 })
 
