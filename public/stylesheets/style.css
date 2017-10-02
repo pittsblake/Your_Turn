@@ -32,9 +32,14 @@ a {
   font-size: 70px;
 }
 
-#meetup-title{
+
+.show-title{
   font-family: 'Share Tech Mono', monospace;
   font-size: 80px;
+}
+
+#city-info{
+  font-family: 'Share Tech Mono', monospace;
 }
 
 #meetup-info {
