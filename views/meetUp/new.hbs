@@ -1,12 +1,25 @@
-<form action="/city/{{cityId}}/meetUp" method="POST">
-     <label for="location">Location</label>
-     <input type="text" name="location">
- 
-     <label for="date">Day</label>
-     <input type="text" name="date">
-
-     <label for="time">Time</label>
-     <input type="text" name="time">
-
-     <input type="submit" value="Create">
- </form> 
+<div class="container">
+   <br>
+   <br>
+    <form action="/city/{{cityId}}/meetUp" method="POST">
+     <div class="row">
+      <div class="col s5" >  
+          <label for="location">Location</label>
+          <input type="text" name="location">
+      </div>
+     </div>
+     <div class="row"> 
+       <div class="col s5" > 
+          <label for="date">Day</label>
+          <input type="text" name="date">
+       </div>
+     </div>
+     <div class="row"> 
+       <div class="col s5" > 
+          <label for="time">Time</label>
+          <input type="text" name="time">
+       </div>
+     </div>
+        <input type="submit" value="Create" class="btn">
+    </form> 
+</div>

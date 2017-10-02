@@ -1,9 +1,19 @@
-<form action="/city/{{cityId}}/meetUp/{{meetUpId}}/boardGame" method="POST">
-     <label for="name">Name</label>
-     <input type="text" name="name">
- 
-     <label for="date">Date</label>
-     <input type="text" name="date">
-
-     <input type="submit" value="Create">
- </form> 
+<div class="container">  
+    <br>
+    <br>
+    <form action="/city/{{cityId}}/meetUp/{{meetUpId}}/boardGame" method="POST">
+        <div class="row">
+            <div class="col s4">
+                <label for="name">Name</label>
+                <input type="text" name="name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s4">
+                <label for="date">Date</label>
+                <input type="text" name="date">
+            </div>
+        </div>
+        <input type="submit" value="Create" class="btn waves-effect">
+    </form> 
+</div>
