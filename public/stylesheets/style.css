@@ -32,12 +32,35 @@ a {
   font-size: 70px;
 }
 
-h1, h2 {
+#meetup-title{
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 80px;
+}
+
+#meetup-info {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 35px;
+}
+
+#date-info {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+#game-info {
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+#pick-city {
   font-family: 'Raleway Dots', cursive;
   font-style: italic;
 }
 
-.pic-title {
+#pic-title {
   font-size: 40px;
   margin: 0 auto;
   padding: 0 auto;
@@ -78,3 +101,4 @@ h1, h2 {
   justify-content: flex-end;
   align-self: flex-end;
 }
+
