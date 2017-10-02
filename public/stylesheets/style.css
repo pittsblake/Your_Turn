@@ -6,8 +6,8 @@ a {
   color: #00B7FF;
 }
 
-.background{
-  background: url("https://i.imgur.com/VhHHsRo.jpg");
+.bimage{
+  background: url("https://i.imgur.com/NNIyEq8.jpg");
   height: 100vh;
   width: 100vw;
 }
@@ -114,3 +114,6 @@ a {
   align-self: flex-end;
 }
 
+.card .card-image .card-title {
+  padding: 2px;
+}
