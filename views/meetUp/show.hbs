@@ -19,11 +19,11 @@
         <br> {{#each meetUp.boardGame}}
         <div class="row">
             <div class="col s6 offset-s3">
-                <div class="card-small z-depth-5">
+                <div class="card-small z-depth-5 hoverable">
                     <h5 class="center"><span id="date-info">{{this.date}}</span> <br> <span id="game-info">{{this.name}}</span></h5>
                     <div class="edit-delete">
-                            <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit" class="btn blue edit"><i class="material-icons">edit</i></a>
-                            <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="waves-effect delete btn red"><i class="material-icons">delete</i></a>
+                            <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit" class="btn-flat waves-effect edit"><i class="material-icons">edit</i></a>
+                            <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="btn-flat waves-effect delete"><i class="material-icons">delete</i></a>
                     </div> 
                 </div>
             </div>
