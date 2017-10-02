@@ -1,29 +1,44 @@
-<div class="grey lighten-5">  
+<div class="grey lighten-5">
     <nav class="vertical-align grey darken-2">
         <div class="nav-wrapper ">
-        <a class="brand-logo your-turn-nav">YOUR TURN</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="underline"><a href="/city/{{cityId}}/meetUp/{{meetUp._id}}/boardGame/new">Create a Game</a></li>
-            <li class="underline"><a href="/city/{{cityId}}">MeetUps</a></li>
-            <li class="underline"><a href="/city">Home</a></li>
-        </ul>
+            <a href="/city" class="brand-logo your-turn-nav">YOUR TURN</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="underline"><a href="/city/{{cityId}}/meetUp/{{meetUp._id}}/boardGame/new">Create a Game</a></li>
+                <li class="underline"><a href="/city/{{cityId}}">MeetUps</a></li>
+                <li class="underline"><a href="/city">Home</a></li>
+            </ul>
         </div>
     </nav>
     <div>
-        
-        <h1 class="center">{{meetUp.location}}</h1>
-        <h3 class="center">{{meetUp.date}}</h3>
-        <h3 class="center">{{meetUp.time}}</h3>
-        
-        <br>
 
-        {{#each meetUp.boardGame}}
-            <h5 class="center">{{this.name}} -- {{this.date}} </h5>
-            <div class="edit-delete">
-                <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit" class="edit">Edit</a>
-                <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="delete">Delete</a>
+        <h1 class="center">{{meetUp.location}}</h1>
+        <h4 class="center">{{meetUp.date}}</h4>
+        <h4 class="center">@</h4>
+        <h4 class="center">{{meetUp.time}}</h4>
+
+        <br> {{#each meetUp.boardGame}}
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card-small z-depth-5">
+                    <h5 class="center">{{this.date}} <br>{{this.name}}</h5>
+                    <div class="edit-delete">
+                            <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit" class="edit btn blue"><i class="material-icons">edit</i></a>
+                            <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="delete btn red"><i class="material-icons">delete</i></a>
+                    </div> 
+                </div>
             </div>
-            
+        </div>
         {{/each}}
     </div>
 </div>
+
+<!--
+
+<table class="bordered">
+    <tbody>
+        <tr>
+            <td class="center valign">{{this.date}}</td>
+            <td class="center valign">{{this.name}}</td>
+        </tr>
+    </tbody>
+</table>  -->

@@ -7,7 +7,6 @@ a {
 }
 
 .delete {
-  color: red;
   display: flex;
   justify-content: center;
   align-items: right;
@@ -63,9 +62,19 @@ h1, h2 {
 .edit-delete {
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid black;
 }
 
 .underline {
   text-decoration: underline;
+}
+
+.card-small{
+  height: 120px;
+}
+
+.btn-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: flex-end;
 }
