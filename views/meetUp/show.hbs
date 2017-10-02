@@ -6,10 +6,21 @@
     
 
     {{#each meetUp.boardGame}}
-        <p>{{this.name}} -- {{this.date}} </p>
-        <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit">Edit</a>
-        <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="delete">Delete</a>
-        <hr>
+        {{#each meetUp.boardGame}}
+          <div>
+              <table>
+                  <tbody>
+                    <tr>
+                        <td><h5 class="center">{{this.name}} -- {{this.date}} </h5>
+                        <div class="edit-delete">
+                            <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit" class="edit">Edit</a>
+                            <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="delete">Delete</a>
+                        </div>
+                    </tr>
+                  <tbody>
+              </table>
+          </div>   
+        {{/each}}
     {{/each}}
     <br>
     <a href="/city/{{cityId}}/meetUp/{{meetUp._id}}/boardGame/new">Create a Game</a>
