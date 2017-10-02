@@ -1,10 +1,17 @@
-<form action="/city/{{cityId}}/meetUp/{{meetUp._id}}/boardGame/{{boardGame._id}}?_method=PUT" method="POST">
-    <label for="name">Name</label>
-    <input type="text" name="name" value="{{boardGame.name}}">
-
-    <label for="date">Date</label>
-    <input type="text" name="date" value="{{boardGame.date}}">
-
-    <input type="submit" value="Submit">
-
-</form>
+<div class="container">
+    <br>
+    <br>
+    <form action="/city/{{cityId}}/meetUp/{{meetUp._id}}/boardGame/{{boardGame._id}}?_method=PUT" method="POST">
+       <div class="row" >
+           <div class="col s4">
+                <label for="name">Name</label>
+                <input type="text" name="name" value="{{boardGame.name}} ">
+            </div>
+            <div class="col s4">
+                <label for="date">Date</label>
+                <input type="text" name="date" value="{{boardGame.date}}">
+            </div>
+       </div>
+            <input type="submit" value="Submit" class="btn">
+    </form>
+</div>
