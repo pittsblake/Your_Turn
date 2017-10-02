@@ -1,7 +1,5 @@
 body {
   padding: 0px;
-  
-  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 }
 
 a {
@@ -12,6 +10,15 @@ a {
   color: red;
   display: flex;
   justify-content: center;
+  align-items: right;
+  margin: 10px;
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin: 10px;
 }
 
 .your-turn {
@@ -35,7 +42,7 @@ h1, h2 {
   background: #9dcdd4;
 }
 
-.group{
+.group {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -45,4 +52,10 @@ h1, h2 {
 
 .parallax-container {
   height: 600px;
+}
+
+.edit-delete {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid black;
 }

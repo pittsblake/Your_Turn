@@ -1,20 +1,28 @@
-<div>
-    
-    <h1>{{meetUp.location}}</h1>
-    <h2>{{meetUp.date}}</h2>
-    <h3>{{meetUp.time}}</h3>
-    
+<div class="grey lighten-5">  
+    <nav class="vertical-align grey darken-2">
+        <div class="nav-wrapper ">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/city/{{cityId}}/meetUp/{{meetUp._id}}/boardGame/new">Create a Game</a></li>
+            <li><a href="/city/{{cityId}}">MeetUps</a></li>
+            <li><a href="/city">Home</a></li>
+        </ul>
+        </div>
+    </nav>
+    <div>
+        
+        <h1 class="center">{{meetUp.location}}</h1>
+        <h3 class="center">{{meetUp.date}}</h3>
+        <h3 class="center">{{meetUp.time}}</h3>
+        
+        <br>
 
-    {{#each meetUp.boardGame}}
-        <p>{{this.name}} -- {{this.date}} </p>
-        <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit">Edit</a>
-        <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="delete">Delete</a>
-        <hr>
-    {{/each}}
-    <br>
-    <a href="/city/{{cityId}}/meetUp/{{meetUp._id}}/boardGame/new">Create a Game</a>
-    <br>
-    <br>
-    <a href="/city/{{cityId}}">Back to MeetUps</a>
-
+        {{#each meetUp.boardGame}}
+            <h5 class="center">{{this.name}} -- {{this.date}} </h5>
+            <div class="edit-delete">
+                <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/edit" class="edit">Edit</a>
+                <a href="/city/{{../cityId}}/meetUp/{{../meetUp._id}}/boardGame/{{this._id}}/delete" class="delete">Delete</a>
+            </div>
+            
+        {{/each}}
+    </div>
 </div>
