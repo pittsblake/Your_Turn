@@ -27,6 +27,12 @@ a {
   font-style: italic;
 }
 
+.your-turn-nav{
+  font-family: 'Share Tech Mono', monospace;
+  font-style: italic;
+  font-size: 70px;
+}
+
 h1, h2 {
   font-family: 'Raleway Dots', cursive;
   font-style: italic;
@@ -58,4 +64,8 @@ h1, h2 {
   display: flex;
   justify-content: center;
   border-bottom: 2px solid black;
+}
+
+.underline {
+  text-decoration: underline;
 }
