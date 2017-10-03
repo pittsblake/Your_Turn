@@ -1,26 +1,28 @@
-<div class="grey lighten-5">    
+<div class="grey lighten-5">
     <nav class="vertical-align #90a4ae blue-grey lighten-1">
         <div class="nav-wrapper ">
-        <a href="/city" class="brand-logo your-turn-nav hoverable">YOUR TURN</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="underline"><a href="/city/{{city._id}}/meetUp/new">Create a Meet Up</a></li>
-            <li class="underline"><a href="/city">Home</a></li>
-        </ul>
+            <a href="/city" class="brand-logo your-turn-nav hoverable">YOUR TURN</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="underline"><a href="/city/{{city._id}}/meetUp/new">Create a Meet Up</a></li>
+                <li class="underline"><a href="/city">Home</a></li>
+            </ul>
         </div>
     </nav>
     <div class="grey lighten-5">
         <div class="group">
-            <h1 class="show-title"> 
-                {{#each city}}  
-                    {{this.city}} 
-                {{/each}} 
-                Meet Ups
-            </h1>      
+            <h1 class="show-title">
+                {{#each city}} {{this.city}} {{/each}} Meet Ups
+            </h1>
         </div>
         <div class="grey lighten-5">
             {{#each city.meetUp}}
-                <h3 id="city-info" class="center hoverable"><a href="/city/{{../city._id}}/meetUp/{{this._id}}" class="">{{this.location}} <span><a href="/city/{{../city._id}}/meetUp/{{this._id}}/delete" class="btn-flat waves-effect disabled"><i class="material-icons">delete</i></a></span></h3>
-                
+            <h3 id="city-info" class="center hoverable">
+                <a href="/city/{{../city._id}}/meetUp/{{this._id}}" class="">{{this.location}} 
+                <span>
+                    <a href="/city/{{../city._id}}/meetUp/{{this._id}}/delete" class="btn-flat waves-effect disabled"><i class="material-icons">delete</i></a>
+                </span>
+            </h3>
+
             {{/each}}
         </div>
     </div>
