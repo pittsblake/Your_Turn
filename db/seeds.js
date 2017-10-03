@@ -23,7 +23,7 @@ const BoardGameModel = Schema.BoardGameModel;
 const UserModel = Schema.UserModel;
 
 //Delete all Users
-CityModel.remove({}, function (err) {
+UserModel.remove({}, function (err) {
     console.log(err)
 });
 
