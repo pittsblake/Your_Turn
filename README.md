@@ -5,15 +5,16 @@
 This is a boardgame meet up website. User's can pick the city that they live in. Each city has locations within it that hosts boardgames once a week. The admin user can add new locations in a city and add new games for each week. The purpose is to create a social event for board game lovers to make new friends.
 
 #link to app
-
 https://secure-refuge-94505.herokuapp.com/city
 
 #link to Trello
 https://trello.com/b/jHbQ8mnr/your-turn
 
 #link to Wireframe
-
 https://marvelapp.com/project/2296382/
+
+#link to ERD
+https://imgur.com/BGouM8E
 
 #libraries used
     - Materialize
