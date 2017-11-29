@@ -117,3 +117,11 @@ a {
 .card .card-image .card-title {
   padding: 2px;
 }
+
+@media only screen and (min-width: 1900px) {
+
+  .parallax-container {
+    height: 750px;
+  }
+
+}
